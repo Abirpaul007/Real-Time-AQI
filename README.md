@@ -71,5 +71,8 @@ Open Terminal and type:
 ```bash
 ifconfig
 ```
-
+<p float="left">
+  <img src="HOME.JPG" width="45%" />
+  <img src="APPHIS.JPG" width="45%" />
+</p>
 
