@@ -71,8 +71,17 @@ Open Terminal and type:
 ```bash
 ifconfig
 ```
+---
+## Preview
+
+
 <p float="left">
-  <img src="HOME.JPG" width="45%" />
-  <img src="APPHIS.JPG" width="45%" />
+  <img src="HOME.jpg" width="22%"  />
+    &nbsp;&nbsp;&nbsp;
+  <img src="APPHIS.jpg" width="22%" />
+   &nbsp;&nbsp;&nbsp;
+   <img src="MAPAQI.jpg" width="22%" />
+   &nbsp;&nbsp;&nbsp;
+  <img src="RECOM.jpg" width="22%" />
 </p>
 
