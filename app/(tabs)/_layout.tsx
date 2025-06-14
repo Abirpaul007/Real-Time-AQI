@@ -7,6 +7,10 @@ import { IconSymbol } from '@/components/ui/IconSymbol';
 import TabBarBackground from '@/components/ui/TabBarBackground';
 import { Colors } from '@/constants/Colors';
 import { useColorScheme } from '@/hooks/useColorScheme';
+import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons';
+import MaterialIcons from '@expo/vector-icons/MaterialIcons';
+import FontAwesome5 from '@expo/vector-icons/FontAwesome5';
+
 
 export default function TabLayout() {
   const colorScheme = useColorScheme();
@@ -26,18 +30,34 @@ export default function TabLayout() {
           default: {},
         }),
       }}>
-      <Tabs.Screen
-        name="index"
+        <Tabs.Screen
+        name="History"
         options={{
-          title: 'Home',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="house.fill" color={color} />,
+          title: 'History',
+          tabBarIcon: ({ color }) => <MaterialCommunityIcons name="chart-histogram" size={24} color={color} />,
+        }}
+      />
+      
+      <Tabs.Screen
+        name="HomeScreen"
+        options={{
+          title: 'Details',
+          tabBarIcon: ({ color }) => <MaterialIcons name="details" size={28} color={color} />,
         }}
       />
       <Tabs.Screen
-        name="explore"
+        name="AQIMAPSCREEN"
         options={{
-          title: 'Explore',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="paperplane.fill" color={color} />,
+          title: 'Map',
+          tabBarIcon: ({ color }) => <FontAwesome5 name="map-marked-alt" size={24} color={color} />,
+        }}
+      />
+      <Tabs.Screen
+        name="Suggetion"
+        options={{
+          title: 'Reccomendation',
+          
+          tabBarIcon: ({ color }) => <MaterialIcons name="health-and-safety" size={24} color={color}/>,
         }}
       />
     </Tabs>

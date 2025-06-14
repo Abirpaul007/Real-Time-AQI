@@ -1,0 +1,11 @@
+http://192.168.154.48:3000/api/aqi
+
+const getEarthImage = (aqi) => {
+  const val = parseFloat(aqi);
+  if (val <= 50) return require('../src/screens/Earth1-removebg-preview.png');
+  if (val <= 100) return require('../src/screens/Earth2-removebg-preview.png');
+  if (val <= 150) return require('../src/screens/Earth3-removebg-preview.png');
+  if (val <= 200) return require('../src/screens/Earth4.png-removebg-preview.png');
+  if (val <= 300) return require('../src/screens/Earth5-removebg-preview.png');
+  return require('../src/screens/Earth5-removebg-preview.png');
+};
