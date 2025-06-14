@@ -1,4 +1,26 @@
-# Welcome to your Expo app 👋
+<img src="https://img.icons8.com/color/96/air-quality.png" height="60"/>
+
+#  Real-Time AQI Monitor
+
+> A cross-platform React Native app with a lightweight backend for live Air Quality Index and Pollution Parameter tracking.
+
+![React Native](https://img.shields.io/badge/React_Native-⚛️-blue.svg) ![Node.js](https://img.shields.io/badge/Node.js-green) ![MIT License](https://img.shields.io/badge/License-MIT-yellow.svg)
+
+---
+
+## 🚀 Overview
+
+Real-Time AQI Monitor fetches and displays air quality levels for your current location. 🏙️ The React Native app calls the backend service to retrieve live AQI data.
+
+**Key Features:**
+
+- 📍 Auto-detects device location to show relevant AQI
+- 🔴🟢 Dynamic color-coded indicators (Good to Hazardous)
+- 🗓️ Shows timestamp of the last update
+- 🔧 Easy to configure and extend
+- 📊 History Chart of AQI of that loaction in **Graph**
+
+---
 
 This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
 
@@ -16,35 +38,38 @@ This is an [Expo](https://expo.dev) project created with [`create-expo-app`](htt
     npx expo start
    ```
 
-In the output, you'll find options to open the app in a
+This project supports 
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
+
+- [Android](https://docs.expo.dev/workflow/android-studio-emulator/)
+- [iOSr](https://docs.expo.dev/workflow/ios-simulator/)
 - [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
 
 You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
 
-## Get a fresh project
+### 🔧 Update Your IP Address
 
-When you're ready, run:
+Before running the app, **make sure to replace the hardcoded IPv4 address** in your frontend API calls with **your own local IPv4 address** (usually something like `192.168.x.x`):
+
+```js
+// Example in frontend API call (React Native)
+const BASE_URL = "http://YOUR-IPV4-ADDRESS:5000"; // 🔁 Replace with your system's IPv4 address
+```
+ How to Find Your IPv4 Address:
+Windows:
+Open Command Prompt and type:
 
 ```bash
-npm run reset-project
+
+ipconfig
+```
+Look for IPv4 Address under your network adapter.
+
+Mac/Linux:
+Open Terminal and type:
+
+```bash
+ifconfig
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
 
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
